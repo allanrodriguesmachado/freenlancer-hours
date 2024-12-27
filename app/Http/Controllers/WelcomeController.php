@@ -15,8 +15,6 @@ class WelcomeController extends Controller
             'password' => bcrypt('password')
         ]);
 
-        dd($user);
-
         return view('welcome');
     }
 }
