@@ -9,8 +9,7 @@ class Show extends Component
 {
     public Project $project;
 
-
-    public function render()
+    public function render(): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application
     {
         return view('livewire.projects.show');
     }
