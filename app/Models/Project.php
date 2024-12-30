@@ -10,4 +10,11 @@ class Project extends Model
 {
     /** @use HasFactory<ProjectFactory> */
     use HasFactory;
+
+    public function casts(): array
+    {
+        return [
+            'tech_stack' => 'array'
+        ];
+    }
 }

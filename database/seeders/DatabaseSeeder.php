@@ -16,6 +16,10 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::factory(10)->create();
-        Project::factory(10)->create();
+
+        User::query()->inRandomOrder()->limit(10)->get()->each(fn(User $user) => Project::factory(10)->create(['created_by' => $user->id])
+        );
+
+
     }
 }
